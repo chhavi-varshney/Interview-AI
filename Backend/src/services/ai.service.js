@@ -60,7 +60,7 @@ async function generateInterviewReport({ resume, selfDescription, jobDescription
 async function generatePdfFromHtml(htmlContent) {
     const browser = await puppeteer.launch({
     headless: true,
-    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
+    executablePath: puppeteer.executablePath(),
     args: [
         "--no-sandbox",
         "--disable-setuid-sandbox",
